@@ -44,11 +44,15 @@ createApp({
         },
         nextSlide() {
             this.activeIndex === this.images.length - 1 ? this.activeIndex = 0 : this.activeIndex++;
-        }
+        },
     },
     created() {
-        autoplay: setInterval(this.nextSlide, 1000); {
+        if (this.isSliderHover === true) {
+            clearInterval(this.autoplay);
+        } else {
+            autoplay: setInterval(this.nextSlide, 1000);
         }
+
     }
 
 
