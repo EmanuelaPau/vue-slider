@@ -34,9 +34,15 @@ createApp({
             ],
 
             activeIndex: 0
-
-
         }
     },
+    methods: {
+        previousSlide() {
+            this.activeIndex--
+        },
+        nextSlide() {
+            this.activeIndex++
+        }
+    }
     // daassas
 }).mount('#app') 
