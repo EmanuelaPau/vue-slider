@@ -35,7 +35,9 @@ createApp({
 
             activeIndex: 0,
 
-            isSliderHover: false
+            isSliderHover: false,
+
+            autoplay: "",
         }
     },
     methods: {
@@ -50,7 +52,7 @@ createApp({
         if (this.isSliderHover === true) {
             clearInterval(this.autoplay);
         } else {
-            autoplay: setInterval(this.nextSlide, 1000);
+            this.autoplay = setInterval(this.nextSlide, 1000);
         }
 
     }
