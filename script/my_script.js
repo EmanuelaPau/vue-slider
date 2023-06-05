@@ -38,10 +38,10 @@ createApp({
     },
     methods: {
         previousSlide() {
-            this.activeIndex--
+            this.activeIndex > 0 ? this.activeIndex-- : this.activeIndex = this.images.length - 1;
         },
         nextSlide() {
-            this.activeIndex++
+            this.activeIndex < this.images.length - 1 ? this.activeIndex++ : this.activeIndex = 0;
         }
     }
     // daassas
