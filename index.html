@@ -19,6 +19,7 @@
 
     <body>
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        
         <div id="app">
             <main class="d-flex flex-wrap align-items-center justify-content-center">
                 <div class="page-wrapper">
@@ -43,16 +44,16 @@
                         <div class="carouselmodule">
                             <div class="my_image-infos-container" id="my_carousel-info-${index + 1}">
                                 <h2 class="my_image-title" id="my_carousel-title-${index + 1}">
-                                    ${element.title}
+                                    {{message}}
                                 </h2>
                                 <p class="my_image-text" id="my_carousel-text-${index + 1}">
-                                    ${element.text}
+                                    {{message}}
                                 </p>
                             </div>
     
                             <div class="carousel-black-multiplyer"></div>
                             <!-- Carousel imgs  -->
-                            <img id="my-carousel-img-${index + 1}" class="carousel-img" src="img/01.webp" alt="${element.title}">
+                            <img id="" class="carousel-img" :src="images[activeIndex].image" alt="">
                         </div>
     
                     </div>
