@@ -37,7 +37,7 @@ createApp({
 
             isSliderHover: false,
 
-            autoplay: "",
+            autoplay: ""
         }
     },
     methods: {
@@ -47,13 +47,15 @@ createApp({
         nextSlide() {
             this.activeIndex = this.activeIndex === this.images.length - 1 ? 0 : this.activeIndex + 1;
         },
+        startAutoplay() {
+            this.autoplay = setInterval(this.nextSlide, 1000);
+        },
+        stopAutoplay() {
+            clearInterval(this.autoplay);
+        },
+
     },
     created() {
-        if (this.isSliderHover === true) {
-            clearInterval(this.autoplay);
-        } else {
-            this.autoplay = setInterval(this.nextSlide, 1000);
-        }
-
+        this.autoplay = setInterval(this.nextSlide, 1000);
     }
 }).mount('#app') 
