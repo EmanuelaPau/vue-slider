@@ -25,14 +25,7 @@
                 <div class="page-wrapper">
                     <h1 class="my_title text-center mb-4" >My vanilla JS Carousel</h1>
                     <!-- Carousel container  -->
-                    <div class="carousel-container">
-                        <!-- Button play -->
-                        <!-- <button type="button" class="btn btn-light my_button-play"><i class="fa-solid fa-play"></i></button>  -->
-                        
-                        <!-- Button stop -->
-                        <!-- <button type="button" class="btn btn-light my_button-stop"><i class="fa-solid fa-pause"></i></button>   -->
-                        
-                        <!-- <button type="button" class="btn btn-light my_button-reverse"><i class="fa-solid fa-backward"></i></button>   -->
+                    <div class="carousel-container" @mouseover="isSliderHover = true" @mouseleave="isSliderHover = false">
     
                         <!-- Button left  -->
                         <button type="button" class="btn btn-light my_button-left" ><i class="fa-solid fa-chevron-left" @click="previousSlide"></i></button>    
@@ -63,7 +56,7 @@
                             <img :src="slide.image" :alt="slide.title" >
                         </div>
                     </div>
-                    
+                    <span test="">ciao {{isSliderHover === true ? 'sono in hover' : 'non sono in hover'}}</span>
                 </div>
             </main>
         </div>

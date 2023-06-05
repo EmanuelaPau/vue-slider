@@ -33,7 +33,9 @@ createApp({
                 }
             ],
 
-            activeIndex: 0
+            activeIndex: 0,
+
+            isSliderHover: false
         }
     },
     methods: {
@@ -45,8 +47,10 @@ createApp({
         }
     },
     created() {
-        autoplay: setInterval(this.nextSlide, 3000); {
+        autoplay: setInterval(this.nextSlide, 1000); {
         }
     }
+
+
 
 }).mount('#app') 
