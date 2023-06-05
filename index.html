@@ -18,51 +18,54 @@
     </head>
 
     <body>
-        <main class="d-flex flex-wrap align-items-center justify-content-center">
-            <div class="page-wrapper">
-                <h1 class="my_title text-center mb-4" >My vanilla JS Carousel</h1>
-                <!-- Carousel container  -->
-                <div class="carousel-container">
-                    <!-- Button play -->
-                    <button type="button" class="btn btn-light my_button-play"><i class="fa-solid fa-play"></i></button> 
-                    
-                    <!-- Button stop -->
-                    <button type="button" class="btn btn-light my_button-stop"><i class="fa-solid fa-pause"></i></button>  
-                    
-                    <button type="button" class="btn btn-light my_button-reverse"><i class="fa-solid fa-backward"></i></button>  
-
-                    <!-- Button left  -->
-                    <button type="button" class="btn btn-light my_button-left"><i class="fa-solid fa-chevron-left"></i></button>    
-
-                    <!-- Button right  -->
-                    <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>
-
-                     <!-- Text info   -->
-                    <div class="carouselmodule">
-                        <div class="my_image-infos-container" id="my_carousel-info-${index + 1}">
-                            <h2 class="my_image-title" id="my_carousel-title-${index + 1}">
-                                ${element.title}
-                            </h2>
-                            <p class="my_image-text" id="my_carousel-text-${index + 1}">
-                                ${element.text}
-                            </p>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <div id="app">
+            <main class="d-flex flex-wrap align-items-center justify-content-center">
+                <div class="page-wrapper">
+                    <h1 class="my_title text-center mb-4" >My vanilla JS Carousel</h1>
+                    <!-- Carousel container  -->
+                    <div class="carousel-container">
+                        <!-- Button play -->
+                        <button type="button" class="btn btn-light my_button-play"><i class="fa-solid fa-play"></i></button> 
+                        
+                        <!-- Button stop -->
+                        <button type="button" class="btn btn-light my_button-stop"><i class="fa-solid fa-pause"></i></button>  
+                        
+                        <button type="button" class="btn btn-light my_button-reverse"><i class="fa-solid fa-backward"></i></button>  
+    
+                        <!-- Button left  -->
+                        <button type="button" class="btn btn-light my_button-left"><i class="fa-solid fa-chevron-left"></i></button>    
+    
+                        <!-- Button right  -->
+                        <button type="button" class="btn btn-light my_button-right"><i class="fa-solid fa-chevron-right"></i></button>
+    
+                         <!-- Text info   -->
+                        <div class="carouselmodule">
+                            <div class="my_image-infos-container" id="my_carousel-info-${index + 1}">
+                                <h2 class="my_image-title" id="my_carousel-title-${index + 1}">
+                                    ${element.title}
+                                </h2>
+                                <p class="my_image-text" id="my_carousel-text-${index + 1}">
+                                    ${element.text}
+                                </p>
+                            </div>
+    
+                            <div class="carousel-black-multiplyer"></div>
+                            <!-- Carousel imgs  -->
+                            <img id="my-carousel-img-${index + 1}" class="carousel-img" src="img/01.webp" alt="${element.title}">
                         </div>
-
-                        <div class="carousel-black-multiplyer"></div>
-                        <!-- Carousel imgs  -->
-                        <img id="my-carousel-img-${index + 1}" class="carousel-img" src="img/01.webp" alt="${element.title}">
+    
                     </div>
-
-                </div>
-
-                <div class="carousel-miniatures-container d-flex flex-wrap justify-content-between">
-                    <div class="miniaturebox card-link">
-                        <img src="img/01.webp" alt="${element.title}">
+    
+                    <div class="carousel-miniatures-container d-flex flex-wrap justify-content-between">
+                        <div class="miniaturebox card-link">
+                            <img src="img/01.webp" alt="${element.title}">
+                        </div>
                     </div>
+                    
                 </div>
-                
-            </div>
-        </main>
+            </main>
+        </div>
         <!-- JS  -->
         <script type="text/javascript" src="script/my_script.js"></script>
     </body>
