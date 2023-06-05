@@ -43,6 +43,10 @@ createApp({
         nextSlide() {
             this.activeIndex === this.images.length - 1 ? this.activeIndex = 0 : this.activeIndex++;
         }
+    },
+    created() {
+        autoplay: setInterval(this.nextSlide, 3000); {
+        }
     }
-    // daassas
+
 }).mount('#app') 
