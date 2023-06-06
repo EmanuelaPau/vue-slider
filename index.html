@@ -54,9 +54,8 @@
                     <div class="carousel-miniatures-container d-flex flex-wrap justify-content-between">
                         <div class="miniaturebox card-link" v-for="(slide,index) in images" :class="index === activeIndex ? 'color': ''" @click="() => activeIndex = index">
                             <img :src="slide.image" :alt="slide.title" >
-                        </div>
+                        </div>   
                     </div>
-                    <span test="">ciao {{isSliderHover === true ? 'sono in hover' : 'non sono in hover'}}</span>
                 </div>
             </main>
         </div>

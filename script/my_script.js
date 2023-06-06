@@ -35,8 +35,6 @@ createApp({
 
             activeIndex: 0,
 
-            isSliderHover: false,
-
             autoplay: ""
         }
     },
@@ -52,8 +50,7 @@ createApp({
         },
         stopAutoplay() {
             clearInterval(this.autoplay);
-        },
-
+        }
     },
     created() {
         this.autoplay = setInterval(this.nextSlide, 1000);
