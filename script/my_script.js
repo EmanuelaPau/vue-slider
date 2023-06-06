@@ -46,13 +46,13 @@ createApp({
             this.activeIndex = this.activeIndex === this.images.length - 1 ? 0 : this.activeIndex + 1;
         },
         startAutoplay() {
-            this.autoplay = setInterval(this.nextSlide, 1000);
+            this.autoplay = setInterval(this.nextSlide, 3000);
         },
         stopAutoplay() {
             clearInterval(this.autoplay);
         }
     },
     created() {
-        this.autoplay = setInterval(this.nextSlide, 1000);
+        this.autoplay = setInterval(this.nextSlide, 3000);
     }
 }).mount('#app') 
