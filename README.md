@@ -1,7 +1,7 @@
 # vue-slider
 Slider made with Vue JS<br><br>
 
-<img src="img/Screen.png" width="800px">
+<img src="img/Screen1.png" width="800px">
 
 <h2><strong>HOW IT WORKS:</strong></h2>
 This carousel takes it's infos (img urls,img titles, img descriptions) from an Array of Ojects and it traduces them in a functioning carousel<br>
